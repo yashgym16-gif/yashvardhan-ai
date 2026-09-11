@@ -1,0 +1,26 @@
+{
+  "name": "yashvardhan-ai",
+  "version": "2.0.0",
+  "description": "YASHVARDHAN AI — Futuristic JARVIS-Style Voice-First Windows Assistant",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "server": "node server/src/index.js",
+    "client": "npm --prefix client run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build:client": "npm --prefix client run build",
+    "start": "node server/src/index.js",
+    "electron": "electron .",
+    "app": "concurrently \"npm run server\" \"wait-on http://localhost:5000/api/health && electron .\""
+  },
+  "keywords": [
+    "ai",
+    "assistant",
+    "jarvis",
+    "voice-assistant",
+    "windows-automation",
+    "hindi-ai",
+    "hinglish"
+  ],
+  "author": "Yashvardhan",
+  "license": "MIT"
+}
